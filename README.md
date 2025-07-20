@@ -48,22 +48,24 @@ EduBot is an AI-based learning assistant designed to help school students (Grade
 ## 📂 Folder Structure
 
 
-ai-edu-bot/
-│
-├── templates/ # HTML files
-│ └── index.html
-│
-├── static/ # JS, CSS
-│ ├── style.css
-│ └── script.js
-│
-├── instance/ # SQLite DB
-│ └── edubot.db
-│
-├── .env # API keys (Together + YouTube)
-├── app.py # Flask backend
-├── requirements.txt # Python dependencies
-└── README.md # You're reading this!
+EduBot/
+├── app.py
+├── templates/
+│   ├── index.html
+│   └── login.html                  ← Your login page
+├── static/
+│   ├── css/
+│   │   ├── style.css
+│   │   └── login.css              ← Moved to css/ folder
+│   ├── js/
+│   │   └── script.js
+│   └── images/
+│       └── logo.png               ← ✅ Place logo here
+├── edubot.db                      ← (optional)
+├── requirements.txt
+├── .env.example
+└── README.md
+
 
 
 ---
@@ -95,11 +97,7 @@ Create a `.env` file at the root and include: TOGETHER_API_KEY=your_together_api
 
 ---
 
-## 📸 Demo Screenshot
 
-> *(Insert screenshot or short GIF here of the working app)*
-
----
 
 ## 📜 License
 
