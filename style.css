@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+body {
+    font-family: 'Comic Neue', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff8f0;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    position: relative;
+}
+
+/* Title */
+.title {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.blue {
+    color: #007bff;
+}
+
+/* Logout */
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+/* Progress Bar */
+.progress-container {
+    margin-bottom: 30px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #00c9ff, #92fe9d);
+    border-radius: 10px;
+    transition: width 0.6s ease-in-out;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 0 5px;
+    color: #555;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.input-section input,
+.input-section select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 40%;
+    min-width: 200px;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn.blue {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn.green {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn.blue:hover {
+    background-color: #0056b3;
+}
+
+.btn.green:hover {
+    background-color: #1e7e34;
+}
+
+/* Answer Output */
+.output-box {
+    background-color: #fdf6ec;
+    padding: 25px;
+    border-radius: 12px;
+    border: 3px solid #ffd166;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.output-box h2 {
+    margin-top: 0;
+    color: #073b4c;
+    font-size: 22px;
+}
+
+.output-box p {
+    margin: 12px 0;
+}
+
+/* 🔹 Answer Paragraph Block */
+.answer-content {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Example Box */
+.example-box {
+    background-color: #fff4cc;
+    border-left: 5px solid #f4a261;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.example-box strong {
+    color: #d35400;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Summary Section */
+.summary-section {
+    background: #fff3cd;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.summary-section h3 {
+    color: #ff7c43;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Quiz Section */
+.quiz-box .quiz-question {
+    background: #f9f9f9;
+    border-left: 5px solid #00b4d8;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.quiz-box .feedback {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Navigation */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Listening Blink */
+input.listening {
+    border: 2px solid #ff9800;
+    animation: blink 1s step-start 0s infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .input-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-section input,
+    .input-section select {
+        width: 80%;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+    }
+
+    .logout-button {
+        top: 10px;
+        right: 10px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+/* Suggestion Box Styling */
+.suggestion-box {
+    margin-top: 25px;
+    padding: 15px 20px;
+    background-color: #e0f7fa;
+    border-left: 5px solid #00bcd4;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.suggestion-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #007c91;
+}
+
+.suggestion-box ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.suggestion-box li {
+    margin-bottom: 8px;
+}
+
+.suggestion-link {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.suggestion-link:hover {
+    color: #0056b3;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EduBot - Ask Me Anything</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body data-level="{{ level }}" data-count="{{ count }}">
+
+    <div class="container">
+        <button class="logout-button" onclick="window.location.href='/logout'">Logout</button>
+
+        <h1 class="title">🎓 EduBot - <span class="blue">Ask Me Anything</span></h1>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-labels">
+                <span id="beginner" class="active">Beginner</span>
+                <span id="intermediate">Intermediate</span>
+                <span id="advanced">Advanced</span>
+            </div>
+        </div>
+
+        <!-- Concept Input + Language + Ask + Speak + Read Aloud -->
+        <div class="input-section">
+            <input type="text" id="conceptInput" placeholder="Enter concept to learn">
+            <select id="languageSelect">
+                <option>English</option>
+                <option>Hindi</option>
+                <option>Gujarati</option>
+            </select>
+            <button class="btn blue" onclick="askConcept()">Ask</button>
+            <button class="btn green" onclick="speakInput()">🎤 Speak</button>
+            <button class="btn green" id="readButton" onclick="toggleReadAnswerAloud()">🎧 Read Aloud Answer</button>
+
+
+
+        </div>
+
+        <!-- Answer Display Box -->
+        <div class="output-box" id="outputBox">
+            <p><strong>Concept:</strong> <span id="userQuestion">---</span></p>
+            <p><strong>Answer:</strong></p>
+        <div id="botAnswer">Your answer will appear here...</div>
+
+<!-- 🔴 YouTube Video Embed -->
+<div id="youtubeVideo" style="margin-top: 20px;"></div>
+
+
+        <!-- Suggested next topics will be inserted here dynamically -->
+        <div id="suggestionLinks"></div>
+
+
+        </div>
+
+        <!-- Quiz Section -->
+        <div id="quiz-section" class="quiz-box">
+            <!-- Interactive quiz appears here -->
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button class="btn blue" onclick="previousConcept()">⬅ Previous</button>
+            <button class="btn green" onclick="nextConcept()">➡ Next</button>
+            <button class="btn blue" onclick="quizMe()">📝 Quiz Me</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

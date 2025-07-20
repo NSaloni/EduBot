@@ -1,0 +1,78 @@
+/* login.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #e9f5fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.login-container img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.login-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.login-container button {
+    padding: 10px 20px;
+    background-color: #00b894;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-container button:hover {
+    background-color: #019875;
+}
+
+
+#youtubeVideo {
+    background: #f1f1f1;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+#youtubeVideo ul {
+    list-style: none;
+    padding: 0;
+}
+#youtubeVideo li {
+    margin: 6px 0;
+}
+#youtubeVideo a {
+    color: #007bff;
+    text-decoration: none;
+}
+#youtubeVideo a:hover {
+    text-decoration: underline;
+}
+
